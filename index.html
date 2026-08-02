@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Semantic Galaxy · neural search in 3D</title>
+  <meta name="description" content="A transformer embedding model runs on-device in your browser; documents become a navigable 3D galaxy you can search by meaning." />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="./src/styles.css" />
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="galaxy"></canvas>
+  <div id="tooltip"></div>
+
+  <header class="hud top">
+    <div class="brand">
+      <div class="logo">◐</div>
+      <div>
+        <h1>Semantic&nbsp;Galaxy</h1>
+        <p>on-device neural search · <span id="modeBadge" class="badge">loading…</span></p>
+      </div>
+    </div>
+    <div class="stats">
+      <div><b id="statN">—</b><span>documents</span></div>
+      <div><b id="statD">—</b><span>dims</span></div>
+      <div><b id="statK">—</b><span>clusters</span></div>
+    </div>
+  </header>
+
+  <section class="hud panel">
+    <div class="search">
+      <input id="q" placeholder="Search by meaning — e.g. “how do machines understand language?”" autocomplete="off" />
+      <button id="go">Search</button>
+      <button id="clear" class="ghost">Reset</button>
+    </div>
+    <div class="chips">
+      <button class="chip">how neural networks learn</button>
+      <button class="chip">keeping data consistent across servers</button>
+      <button class="chip">how life stores information</button>
+      <button class="chip">growing money over time</button>
+    </div>
+    <div id="results"></div>
+  </section>
+
+  <footer class="hud bottom">
+    <span>drag to orbit · scroll to zoom · hover a star</span>
+    <span class="dot">·</span>
+    <span>384-D MiniLM embeddings → PCA → k-means, all in-browser</span>
+  </footer>
+
+  <div id="stage" class="stage">
+    <div class="loader">
+      <div class="ring"></div>
+      <h2>Semantic Galaxy</h2>
+      <p id="pct">initializing…</p>
+      <div class="track"><div id="bar"></div></div>
+      <small>first load downloads a ~23&nbsp;MB transformer once, then runs offline</small>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
