@@ -1,0 +1,31 @@
+{
+  "name": "semantic-galaxy",
+  "version": "1.0.0",
+  "description": "A neural semantic search engine you can fly through — a transformer embedding model runs entirely in your browser and turns a corpus into a navigable 3-D galaxy searchable by meaning.",
+  "type": "module",
+  "keywords": [
+    "semantic-search",
+    "embeddings",
+    "transformers",
+    "transformers-js",
+    "three-js",
+    "webgl",
+    "pca",
+    "k-means",
+    "on-device-ai",
+    "vector-search",
+    "machine-learning",
+    "visualization"
+  ],
+  "homepage": "https://mneha05.github.io/semantic-galaxy/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mneha05/semantic-galaxy.git"
+  },
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "author": "Neha Mahesh",
+  "license": "MIT"
+}
