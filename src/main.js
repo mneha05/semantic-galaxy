@@ -43,7 +43,7 @@ async function boot() {
   badge.classList.add(mode === "transformer" ? "ok" : "warn");
 
   setStage(1, "ready");
-  setTimeout(() => stage.classList.add("hidden"), 500);
+  setTimeout(() => { stage.classList.add("hidden"); input.focus(); }, 500);
 }
 
 async function runQuery(text) {
@@ -65,7 +65,10 @@ async function runQuery(text) {
     </div>`).join("");
 }
 
-input.addEventListener("keydown", (e) => { if (e.key === "Enter") runQuery(input.value); });
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") runQuery(input.value);
+  if (e.key === "Escape") { input.value = ""; resultsEl.innerHTML = ""; galaxy?.clearResults(); }
+});
 $("#go").addEventListener("click", () => runQuery(input.value));
 $("#clear").addEventListener("click", () => { input.value = ""; resultsEl.innerHTML = ""; galaxy?.clearResults(); });
 document.querySelectorAll(".chip").forEach(c =>
