@@ -1,12 +1,16 @@
 :root{
   --bg:#05060f; --ink:#e8ecff; --muted:#9aa4d0; --line:rgba(140,160,255,.16);
-  --glass:rgba(18,22,44,.55); --accent:#7cf6ff; --accent2:#b58bff;
+  --glass:rgba(18,22,44,.55);
+  /* Cosmic Aurora identity — teal → violet → nebula-pink → star-gold */
+  --accent:#7cf6ff; --accent2:#b58bff; --accent3:#ff8bd8; --accent4:#ffd479;
+  --nebula:radial-gradient(1200px 600px at 80% -10%, rgba(181,139,255,.16), transparent 60%),
+           radial-gradient(900px 500px at 10% 110%, rgba(255,139,216,.12), transparent 55%);
 }
 *{box-sizing:border-box}
 html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
   font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow:hidden}
 #galaxy{position:fixed;inset:0;width:100vw;height:100vh;display:block;
-  background:radial-gradient(120% 90% at 50% 10%,#0a1030 0%,#05060f 55%,#020309 100%)}
+  background:var(--nebula),radial-gradient(120% 90% at 50% 10%,#0a1030 0%,#05060f 55%,#020309 100%)}
 
 .hud{position:fixed;z-index:5;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 .top{top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;
