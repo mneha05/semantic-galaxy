@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 80" width="640" height="80" font-family="Segoe UI, Inter, sans-serif">
+  <rect width="640" height="80" rx="12" fill="#05060f"/>
+  <g font-size="10" fill="#93a0c7" text-anchor="middle">
+    <g transform="translate(60,20)"><rect width="60" height="30" rx="6" fill="#7cf6ff"/><text x="30" y="48">#7cf6ff</text></g>
+    <g transform="translate(180,20)"><rect width="60" height="30" rx="6" fill="#b58bff"/><text x="30" y="48">#b58bff</text></g>
+    <g transform="translate(300,20)"><rect width="60" height="30" rx="6" fill="#ff8bd8"/><text x="30" y="48">#ff8bd8</text></g>
+    <g transform="translate(420,20)"><rect width="60" height="30" rx="6" fill="#ffd479"/><text x="30" y="48">#ffd479</text></g>
+    <g transform="translate(540,20)"><rect width="60" height="30" rx="6" fill="#05060f" stroke="#2b3a7a"/><text x="30" y="48">#05060f</text></g>
+  </g>
+  <text x="20" y="14" font-size="10" fill="#7c86bb" letter-spacing="2">COSMIC AURORA · PALETTE</text>
+</svg>
