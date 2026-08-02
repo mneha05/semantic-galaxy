@@ -117,6 +117,12 @@ PCA is deterministic, fast, and easy to implement from scratch — which was par
 
 ---
 
+## 🔒 Privacy
+There is **no analytics, no tracking, and no backend**. The only network request is the one-time model download from a CDN. Your queries are embedded and searched entirely on your device.
+
+## 🎨 Identity
+<img src="docs/palette.svg" alt="Cosmic Aurora color palette" width="70%"/>
+
 ## 🛠️ Built with
 `transformers.js` (on-device inference) · `Three.js` (WebGL) · hand-rolled linear algebra · vanilla ES modules — no backend, no framework, no build step.
 
