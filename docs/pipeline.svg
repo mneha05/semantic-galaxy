@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 240" width="1000" height="240" font-family="Segoe UI, Inter, system-ui, sans-serif">
+  <defs>
+    <linearGradient id="p-acc" x1="0" x2="1"><stop offset="0" stop-color="#7cf6ff"/><stop offset="0.5" stop-color="#b58bff"/><stop offset="1" stop-color="#ff8bd8"/></linearGradient>
+    <filter id="p-glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <marker id="p-arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6" fill="none" stroke="#6b74a8" stroke-width="1.4"/></marker>
+  </defs>
+  <rect width="1000" height="240" rx="18" fill="#080b1c"/>
+  <rect width="1000" height="240" rx="18" fill="none" stroke="rgba(140,160,255,.14)"/>
+
+  <!-- animated packet traveling along the pipeline -->
+  <circle r="5" fill="#fff" filter="url(#p-glow)">
+    <animate attributeName="opacity" values="0;1;1;1;1;0" dur="4s" repeatCount="indefinite"/>
+    <animateMotion dur="4s" repeatCount="indefinite" path="M120,120 H250 M370,120 H500 M620,120 H740 M860,120 H900"/>
+  </circle>
+
+  <!-- stage boxes -->
+  <g text-anchor="middle">
+    <!-- 1 text -->
+    <g><rect x="40" y="86" width="90" height="68" rx="10" fill="#0d1230" stroke="#2b3a7a"/>
+      <text x="85" y="112" font-size="12" fill="#cdd6ff">your text</text>
+      <text x="85" y="132" font-size="10" fill="#7c86bb">“…meaning?”</text></g>
+    <line x1="130" y1="120" x2="200" y2="120" stroke="#3a4680" marker-end="url(#p-arrow)"/>
+
+    <!-- 2 transformer -->
+    <g><rect x="200" y="80" width="120" height="80" rx="10" fill="#101a3c" stroke="#5b9dff"/>
+      <text x="260" y="108" font-size="12" fill="#7cf6ff" font-weight="700">MiniLM</text>
+      <text x="260" y="126" font-size="9.5" fill="#9fb0e6">transformer</text>
+      <text x="260" y="142" font-size="9" fill="#6b74a8">on-device</text></g>
+    <line x1="320" y1="120" x2="390" y2="120" stroke="#3a4680" marker-end="url(#p-arrow)"/>
+
+    <!-- 3 vector -->
+    <g><rect x="390" y="86" width="110" height="68" rx="10" fill="#0d1230" stroke="#2b3a7a"/>
+      <text x="445" y="110" font-size="12" fill="#b58bff" font-weight="700">384-D</text>
+      <text x="445" y="128" font-size="9.5" fill="#9fb0e6">meaning vector</text>
+      <g fill="#7cf6ff"><rect x="410" y="138" width="4" height="8"><animate attributeName="height" values="4;10;4" dur="1.2s" repeatCount="indefinite"/></rect>
+        <rect x="418" y="136" width="4" height="10"/><rect x="426" y="140" width="4" height="6"/><rect x="434" y="134" width="4" height="12"/>
+        <rect x="442" y="138" width="4" height="8"/><rect x="450" y="136" width="4" height="10"/><rect x="458" y="141" width="4" height="5"/><rect x="466" y="135" width="4" height="11"/><rect x="474" y="139" width="4" height="7"/></g></g>
+    <line x1="500" y1="120" x2="610" y2="120" stroke="#3a4680" marker-end="url(#p-arrow)"/>
+
+    <!-- 4 three ops -->
+    <g>
+      <rect x="610" y="58" width="130" height="34" rx="8" fill="#141033" stroke="#8b5bff"/><text x="675" y="80" font-size="11" fill="#c9b6ff">PCA → 3-D</text>
+      <rect x="610" y="103" width="130" height="34" rx="8" fill="#141033" stroke="#b58bff"/><text x="675" y="125" font-size="11" fill="#d9c6ff">k-means → clusters</text>
+      <rect x="610" y="148" width="130" height="34" rx="8" fill="#2a1233" stroke="#ff8bd8"/><text x="675" y="170" font-size="11" fill="#ffc9ec">cosine → ranking</text>
+    </g>
+    <line x1="740" y1="120" x2="850" y2="120" stroke="#3a4680" marker-end="url(#p-arrow)"/>
+
+    <!-- 5 galaxy -->
+    <g><circle cx="905" cy="120" r="42" fill="#0a0f28" stroke="url(#p-acc)"/>
+      <g filter="url(#p-glow)">
+        <circle cx="905" cy="120" r="4" fill="#7cf6ff"><animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/></circle>
+        <circle cx="922" cy="106" r="3" fill="#b58bff"/><circle cx="890" cy="132" r="3" fill="#ff8bd8"/>
+        <circle cx="925" cy="134" r="2.5" fill="#ffd479"/><circle cx="886" cy="106" r="2.5" fill="#7bffa6"/></g>
+      <text x="905" y="184" font-size="10.5" fill="#9fb0e6">the galaxy</text></g>
+  </g>
+
+  <text x="500" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="url(#p-acc)">from a sentence to a place in space — entirely in your browser</text>
+</svg>
