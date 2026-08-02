@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center">             
   <img src="docs/hero.svg" alt="Semantic Galaxy — search a universe of ideas by meaning" width="100%"/>
 </p>
 
